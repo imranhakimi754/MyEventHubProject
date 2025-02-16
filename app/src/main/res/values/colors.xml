@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="purple">#142D3C</color>
+    <color name="yellow">#FFAE42</color>
+    <color name="default_button_color">#D3D3D3</color> <!-- Light grey for default state -->
+    <color name="selected_button_color">#FFAE42</color> <!-- Orange for selected state -->
+
+</resources>

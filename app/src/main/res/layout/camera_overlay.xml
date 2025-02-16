@@ -1,0 +1,45 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#80000000"> <!-- semi-transparent background -->
+
+    <!-- Camera preview -->
+    <SurfaceView
+        android:id="@+id/camera_preview"
+        android:layout_width="260dp"
+        android:layout_height="260dp"
+        android:layout_centerInParent="true" />
+
+    <!-- Center alignment box -->
+    <View
+        android:layout_width="260dp"
+        android:layout_height="260dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/qr_code_frame" /> <!-- Create this drawable for the frame -->
+
+    <!-- Instruction text -->
+    <TextView
+        android:id="@+id/instructionText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:padding="16dp"
+        android:textStyle="bold"
+        android:text="Align the QR code within the frame"
+        android:textColor="@android:color/white"
+        android:textSize="16sp" />
+
+    <!-- Cancel button -->
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/cancel_button_background"
+        android:text="Cancel"
+        android:textColor="@android:color/white" />
+</RelativeLayout>

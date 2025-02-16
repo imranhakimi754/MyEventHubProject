@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#263D4D"
+    tools:context=".updateevent">
+
+
+    <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="The EventHub"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="#FFAE42"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.466" />
+
+        <ScrollView
+            android:id="@+id/scrollView2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/backButton">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp">
+
+                <!-- Upload Picture Title -->
+                <TextView
+                    android:id="@+id/upload_picture_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Upload Picture:"
+                    android:textColor="#FFFF"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <!-- Upload Picture Information -->
+                <TextView
+                    android:id="@+id/upload_picture_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="* You can upload banner or poster of the event (optional)"
+                    android:textColor="#FFAE42"
+                    android:textSize="12dp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/upload_picture_title" />
+
+                <!-- Upload Picture Button -->
+                <FrameLayout
+                    android:id="@+id/upload_picture_frame"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/rectangleshape"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/upload_picture_info">
+
+                    <ImageView
+                        android:id="@+id/upload_picture_icon"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_plus" />
+
+                </FrameLayout>
+
+                <!-- Event Title Label -->
+                <TextView
+                    android:id="@+id/event_title_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Please write the title of event:"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFF"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/upload_picture_frame" />
+
+                <!-- Event Title Input -->
+                <EditText
+                    android:id="@+id/event_title_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textColorHint="#FFFF"
+                    android:textColor="#FFFF"
+                    android:hint="Event Title"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/event_title_label" />
+
+                <!-- Event Date Label -->
+                <TextView
+                    android:id="@+id/event_date_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Choose the date of the event:"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFF"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/event_title_input" />
+
+                <!-- Event Date Input -->
+                <EditText
+                    android:id="@+id/event_date_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="#FFFF"
+                    android:layout_marginTop="8dp"
+                    android:clickable="true"
+                    android:textColor="#FFFF"
+                    android:focusable="false"
+                    android:hint="Event Date"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/event_date_label" />
+
+                <!-- Event Date Icon -->
+                <ImageView
+                    android:id="@+id/event_date_icon"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/ic_calendar"
+                    app:layout_constraintBottom_toBottomOf="@id/event_date_input"
+                    app:layout_constraintEnd_toEndOf="@id/event_date_input"
+                    app:layout_constraintTop_toTopOf="@id/event_date_input" />
+
+                <!-- Event Start Time Label -->
+                <TextView
+                    android:id="@+id/event_start_time_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Choose the start time of the event:"
+                    android:textSize="16sp"
+                    android:textColor="#FFFF"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/event_date_input" />
+
+                <!-- Event Start Time Input -->
+                <EditText
+                    android:id="@+id/event_start_time_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textColorHint="#FFFF"
+                    android:textColor="#FFFF"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:hint="Start Time"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/event_start_time_label" />
+
+                <!-- Event Start Time Icon -->
+                <ImageView
+                    android:id="@+id/event_start_time_icon"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/ic_clock"
+                    app:layout_constraintBottom_toBottomOf="@id/event_start_time_input"
+                    app:layout_constraintEnd_toEndOf="@id/event_start_time_input"
+                    app:layout_constraintTop_toTopOf="@id/event_start_time_input" />
+
+                <!-- Event End Time Label -->
+                <TextView
+                    android:id="@+id/event_end_time_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Choose the end time of the event:"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFF"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/event_start_time_input" />
+
+                <!-- Event End Time Input -->
+                <EditText
+                    android:id="@+id/event_end_time_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textColorHint="#FFFF"
+                    android:clickable="true"
+                    android:textColor="#FFFF"
+                    android:focusable="false"
+                    android:hint="End Time"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/event_end_time_label" />
+
+                <!-- Event End Time Icon -->
+                <ImageView
+                    android:id="@+id/event_end_time_icon"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/ic_clock"
+                    app:layout_constraintBottom_toBottomOf="@id/event_end_time_input"
+                    app:layout_constraintEnd_toEndOf="@id/event_end_time_input"
+                    app:layout_constraintTop_toTopOf="@id/event_end_time_input" />
+
+                <!-- Event Description Label -->
+                <TextView
+                    android:id="@+id/event_description_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Event Description:"
+                    android:textSize="16sp"
+                    android:textColor="#FFFF"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/event_end_time_input" />
+
+                <!-- Event Description Input -->
+                <EditText
+                    android:id="@+id/event_description_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="8dp"
+                    android:gravity="top"
+                    android:textColor="#FFFF"
+                    android:textColorHint="#FFFF"
+                    android:hint="Description"
+                    android:inputType="textMultiLine"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/event_description_label" />
+
+                <!-- Event Type Label -->
+                <TextView
+                    android:id="@+id/event_type_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Event Type:"
+                    android:textColor="#FFFF"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/event_description_input" />
+
+                <!-- Event Type Spinner -->
+                <Spinner
+                    android:id="@+id/event_type_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:entries="@array/event_types"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/event_type_label" />
+
+                <!-- Event Location Label -->
+                <TextView
+                    android:id="@+id/event_location_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Event Location:"
+                    android:textColor="#FFFF"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/event_type_spinner" />
+
+                <!-- Event Location Input -->
+                <Spinner
+                    android:id="@+id/event_location_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:hint="Location"
+                    android:entries="@array/location_array"
+                    android:textColorHint="#FFFF"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/event_location_label" />
+
+                <TextView
+                    android:id="@+id/event_location_message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="If the location is not in the list, choose 'Location in Description' and put the actual event location in the description.!"
+                    android:textColor="#FFAE42"
+                    android:textStyle="bold"
+                    android:textSize="12dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/event_location_input" />
+
+                <!-- Create Event Button -->
+                <Button
+                    android:id="@+id/update_event_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/rectangle_shape"
+                    android:text="Update Event"
+                    android:textColor="#FFAE42"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/event_location_message" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

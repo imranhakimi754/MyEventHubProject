@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">TheEventHub</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="event_types">
+        <item>Choose the event category</item>
+        <item>Academic</item>
+        <item>Social</item>
+        <item>Sport</item>
+        <item>Others</item>
+    </string-array>
+
+    <string-array name="faculty_array">
+        <item>Choose your faculty</item>
+        <item>Staff</item>
+        <item>Faculty of Accountancy</item>
+        <item>Faculty of Administrative Science and Policy Studies</item>
+        <item>College of Creative Arts</item>
+        <item>Faculty of Business And Management</item>
+        <item>College of Computing, Informatics and Mathematics</item>
+        <item>Faculty of Information Management</item>
+        <!-- Add more faculties as needed -->
+    </string-array>
+
+    <string-array name="location_array">
+        <item>Choose the location</item>
+        <item>Location in Description</item>
+        <item>AU200</item>
+        <item>AU300</item>
+        <item>Dewan Pro</item>
+        <item>Padang UiTMCK</item>
+        <item>Pusat Islam</item>
+        <!-- Add more faculties as needed -->
+    </string-array>
+
+
+    <string name="notification_icon">Notification Icon</string>
+
+    <!-- Add your server IP address here -->
+    <string name="server_ip">http://192.168.43.232</string>
+
+</resources>
